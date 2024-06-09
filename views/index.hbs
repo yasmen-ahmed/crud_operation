@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+  <form action="/insert" method="post">
+  <div class="mb-3">
+    <label for="exampleInputName1" class="form-label">User Name</label>
+    <input type="text" class="form-control" placeholder="Enter your name" name="username">
+  </div>
+  <div class="mb-3">
+     <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" placeholder="Enter your Email" name="email">
+  </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary ">Submit</button>
+
+  </div>
+</form >
+     </div>
+    </div>
+  </div>
+ 
+
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+   
+    {{#each users }}
+    
+      <div> User ID :{{this._id}}</div> 
+       <div> User Name :{{this.name}}</div> 
+        <div> User Email :{{this.email}}</div> <br> <br>
+   
+      
+    {{/each}}
+
+  <form action="/getUsers" method="get">
+  <h4 class="text-center">Get all Users</h4>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary ">get users</button>
+
+  </div>
+</form >
+     </div>
+    </div>
+  </div>
+
+
+   <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+  <form action="/update" method="post">
+  <div class="mb-3">
+    <label for="exampleInputId" class="form-label">User ID</label>
+    <input type="text" class="form-control" placeholder="Enter your id" name="id">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName1" class="form-label">User Name</label>
+    <input type="text" class="form-control" placeholder="Enter your name" name="name">
+  </div>
+  <div class="mb-3">
+     <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" placeholder="Enter your Email" name="email">
+  </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary ">Update</button>
+
+  </div>
+</form >
+     </div>
+    </div>
+  </div>
+
+
+   <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+  <form action="/delete" method="post">
+  <div class="mb-3">
+    <label for="exampleInputId" class="form-label">User ID</label>
+    <input type="text" class="form-control" placeholder="Enter your id" name="id">
+  </div>
+ 
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary ">Delete</button>
+
+  </div>
+</form >
+     </div>
+    </div>
+  </div>
+</div>
